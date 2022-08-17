@@ -1,0 +1,22 @@
+.body {
+	background-color: $main-light-color;
+	color: $head-color;
+	font-family: $main-font, $secondary-font, $default-font;
+}
+
+.header-wrapper,
+.footer-wrapper,
+.hero-wrapper,
+.features-wrapper,
+.work-wrapper,
+.team-wrapper,
+.clients-wrapper,
+.portfolio-wrapper {
+	@extend %container;
+}
+
+.social-networks {
+	@extend %list;
+	@extend %flex-condition;
+	gap: 10px;
+}

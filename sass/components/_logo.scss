@@ -1,0 +1,21 @@
+.header__logo {
+	@extend %logo;
+	@extend %link;
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	&--part {
+		color: $main-dark-color;
+	}
+}
+
+.footer__logo {
+	@extend %logo;
+	@extend %link;
+	display: inline-block;
+	margin-bottom: 20px;
+
+	&--part {
+		color: $main-light-color;
+	}
+}

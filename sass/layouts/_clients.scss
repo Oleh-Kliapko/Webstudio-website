@@ -1,0 +1,29 @@
+.clients {
+	@extend %list;
+	@extend %flex-wrap;
+	gap: 30px;
+	margin-top: $header-margin;
+
+	&__link {
+		@extend %link;
+		@extend %flex-condition;
+		outline: transparent;
+		width: 170px;
+		height: 92px;
+		border: $main-border solid $icon-color;
+		border-radius: $main-border-radius;
+		color: $icon-color;
+		@include transition(border);
+		@include transition(color);
+
+		&:hover,
+		&:focus {
+			border: $main-border solid $accent-color;
+			color: $accent-color;
+		}
+	}
+
+	&__icon {
+		fill: currentColor;
+	}
+}

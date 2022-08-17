@@ -1,0 +1,55 @@
+.team {
+	@extend %list;
+	@extend %flex-wrap;
+	text-align: center;
+	margin-right: calc(-1 * $block-margin);
+	margin-top: $header-margin;
+
+	&__item {
+		background: $main-light-color;
+		box-shadow: 0px 1px 3px $main-dark-color-transparency-012, 0px 1px 1px $main-dark-color-transparency-014,
+			0px 2px 1px $main-dark-color-transparency-02;
+		border-radius: 0px 0px 4px 4px;
+		margin-right: $block-margin;
+	}
+
+	&__icon {
+		@extend %icon-condition;
+	}
+}
+
+.member {
+	padding-top: $block-margin;
+	padding-bottom: $block-margin;
+
+	&__title {
+		@extend %title;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.19;
+		letter-spacing: 0.03em;
+		margin-bottom: 10px;
+	}
+
+	&__position {
+		@extend %title;
+		color: $text-color;
+		line-height: 1.19;
+		letter-spacing: 0.03em;
+		margin-bottom: 16px;
+	}
+
+	&__social-link {
+		@extend %flex-condition;
+		@extend %social-link;
+		fill: $icon-color;
+		@include transition(fill);
+		@include transition(background-color);
+
+		&:hover,
+		&:focus {
+			background-color: $accent-color;
+			fill: $main-light-color;
+		}
+	}
+}

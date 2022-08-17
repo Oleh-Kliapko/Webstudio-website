@@ -1,0 +1,32 @@
+.section-team,
+.section-features,
+.section-clients,
+.section-portfolio {
+	@extend %section;
+}
+
+.section-work {
+	margin-top: 0;
+	padding-bottom: $section-margin;
+}
+
+.section-team {
+	background: $secondary-bgr-color;
+}
+
+.section-portfolio {
+	display: block;
+}
+
+.section-features__title,
+.section-work__title,
+.section-team__title,
+.section-clients__title,
+.section-portfolio__title {
+	@extend %section-title;
+}
+
+.section-features__title,
+.section-portfolio__title {
+	@extend %visually-hidden;
+}

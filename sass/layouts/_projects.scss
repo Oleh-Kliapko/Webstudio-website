@@ -1,0 +1,87 @@
+.projects {
+	@extend %list;
+	@extend %flex-wrap;
+	margin-right: calc(-1 * $block-margin);
+	margin-bottom: calc(-1 * $block-margin);
+
+	&__item {
+		width: calc((100% / 3) - $block-margin);
+		margin-right: $block-margin;
+		margin-bottom: $block-margin;
+	}
+
+	&__link {
+		@extend %link;
+		display: block;
+		@include transition(box-shadow);
+
+		&:hover,
+		&:focus {
+			box-shadow: 0px 1px 1px $main-dark-color-transparency-012, 0px 4px 4px $main-dark-color-transparency-006,
+				1px 4px 6px $main-dark-color-transparency-016;
+		}
+	}
+
+	&__card {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__photo {
+		@extend %icon-condition;
+	}
+
+	&__description {
+		display: flex;
+		align-items: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		margin: 0;
+		padding-left: 23px;
+		padding-right: 23px;
+
+		font-size: 18px;
+		line-height: 1.56;
+		letter-spacing: 0.03em;
+		color: $main-light-color;
+		background-color: $accent-color-overlay;
+		transform: translateY(101%);
+		@include transition(transform);
+
+		.projects__link:hover &,
+		.projects__link:focus & {
+			transform: translateY(0%);
+		}
+	}
+
+	&__name {
+		border: $main-border solid $main-border-color;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	&__title {
+		@extend %title;
+		color: $head-color;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 2;
+		letter-spacing: 0.06em;
+		margin-bottom: 4px;
+	}
+
+	&__species {
+		@extend %title;
+		color: $text-color;
+		line-height: 1.88;
+		letter-spacing: 0.03em;
+	}
+}

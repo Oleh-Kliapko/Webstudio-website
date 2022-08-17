@@ -1,0 +1,30 @@
+.footer {
+	background-color: $footer-bgr-color;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	&-wrapper {
+		display: flex;
+		align-items: baseline;
+	}
+
+	&__join,
+	&__subscription {
+		display: block;
+		margin-left: auto;
+	}
+
+	&__join-title,
+	&__subscription-title {
+		@extend %title;
+		display: block;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: $main-light-color;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+}

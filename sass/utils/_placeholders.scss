@@ -1,0 +1,126 @@
+%visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+%logo {
+	color: $accent-color;
+	font-family: $secondary-font, sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.2;
+}
+
+%link {
+	text-decoration: none;
+}
+
+%link-hover {
+	color: $accent-color;
+}
+
+%social-link {
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+}
+
+%list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+%title {
+	margin: 0;
+	padding: 0;
+}
+
+%button {
+	font-size: inherit;
+	cursor: pointer;
+	border: none;
+	border-radius: $main-border-radius;
+	text-decoration: none;
+}
+
+%container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+%icon-condition {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+%flex-condition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+%header {
+	display: flex;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+
+%header-item {
+	margin-left: $header-margin;
+}
+
+%header-link {
+	display: flex;
+	align-items: center;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	transition: color $timing $cubic;
+}
+
+%section {
+	padding-top: $section-margin;
+	padding-bottom: $section-margin;
+}
+
+%section-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+	letter-spacing: 0.03em;
+	margin: 0;
+	padding: 0;
+}
+
+%modal-form__input {
+	border: $main-border solid $third-border-color;
+	border-radius: $main-border-radius;
+	width: 100%;
+	transition: border $timing $cubic;
+	outline: none;
+
+	&:hover,
+	&:focus {
+		border: $main-border solid $accent-color;
+	}
+}

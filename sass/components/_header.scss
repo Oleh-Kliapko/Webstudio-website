@@ -1,0 +1,13 @@
+.header {
+	background: $main-light-color;
+	border-bottom: $main-border solid $secondary-border-color;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	&-wrapper {
+		display: flex;
+	}
+}

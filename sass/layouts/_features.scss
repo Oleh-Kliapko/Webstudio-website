@@ -1,0 +1,36 @@
+.features {
+	@extend %list;
+	@extend %flex-wrap;
+	margin-right: calc(-1 * $block-margin);
+
+	&__item {
+		width: calc(100% / 4 - $block-margin);
+		margin-right: $block-margin;
+	}
+
+	&__icon {
+		@extend %flex-condition;
+		height: 120px;
+		background-color: $secondary-bgr-color;
+		border-radius: $main-border-radius;
+		margin-bottom: $block-margin;
+	}
+
+	&__title {
+		@extend %title;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		@extend %title;
+		color: $text-color;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.03em;
+	}
+}

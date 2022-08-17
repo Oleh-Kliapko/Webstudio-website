@@ -1,0 +1,77 @@
+.header-contacts {
+	@extend %list;
+	@extend %header;
+	margin-left: auto;
+
+	&__item {
+		@extend %header-item;
+	}
+
+	&__link {
+		@extend %link;
+		@extend %header-link;
+		color: $text-color;
+
+		&:hover,
+		&:focus {
+			@extend %link-hover;
+		}
+	}
+
+	&__icon {
+		margin-right: 10px;
+		fill: currentColor;
+	}
+}
+
+.address {
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+
+	&__text {
+		@extend %link;
+		@extend %title;
+		display: block;
+		color: $main-light-color;
+		@include transition(color);
+
+		&:hover,
+		&:focus {
+			@extend %link-hover;
+		}
+	}
+
+	&__list {
+		@extend %list;
+	}
+
+	&__item {
+		margin-top: 9px;
+	}
+
+	&__link {
+		@extend %link;
+		color: $main-light-color-transparency-06;
+		@include transition(color);
+
+		&:hover,
+		&:focus {
+			@extend %link-hover;
+		}
+	}
+}
+
+.join__social-link {
+	@extend %flex-condition;
+	@extend %social-link;
+	fill: $main-light-color;
+	background-color: $main-light-color-transparency-01;
+	@include transition(background-color);
+
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+	}
+}

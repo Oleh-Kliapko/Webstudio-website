@@ -1,0 +1,47 @@
+.hero {
+	letter-spacing: 0.06em;
+	text-align: center;
+	width: 1600px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+	background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero.jpg);
+	background-color: $main-bgr-color;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__title {
+		color: $main-light-color;
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+		text-transform: uppercase;
+
+		width: 696px;
+		margin-top: 0;
+		margin-bottom: 30px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&__button {
+		@extend %button;
+		color: $main-light-color;
+		background-color: $accent-color;
+		box-shadow: 0px 4px 4px $main-dark-color-transparency-015;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.88;
+		letter-spacing: 0.06em;
+		padding: 10px 32px;
+		@include transition(background-color);
+
+		&:hover,
+		&:focus {
+			background-color: $accent-color-hover;
+		}
+	}
+}

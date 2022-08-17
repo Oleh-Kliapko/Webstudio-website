@@ -1,0 +1,41 @@
+.filters {
+	@extend %list;
+	@extend %flex-wrap;
+	justify-content: center;
+	margin-bottom: $header-margin;
+	margin-right: -8px;
+
+	&__item {
+		margin-right: 8px;
+	}
+
+	&__button {
+		@extend %button;
+		color: $head-color;
+		background-color: $secondary-bgr-color;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.62;
+		letter-spacing: 0.03em;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-right: 22px;
+		padding-left: 22px;
+		@include transition(color);
+		@include transition(box-shadow);
+		@include transition(background-color);
+
+		&:hover,
+		&:focus {
+			color: $main-light-color;
+			background-color: $accent-color;
+			box-shadow: 0px 1px 1px $main-dark-color-transparency-012, 0px 4px 4px $main-dark-color-transparency-006,
+				1px 4px 6px $main-dark-color-transparency-016;
+		}
+
+		&--current {
+			color: $main-light-color;
+			background-color: $accent-color;
+		}
+	}
+}
