@@ -1,16 +1,35 @@
 .team {
 	@extend %list;
-	@extend %flex-wrap;
 	text-align: center;
-	margin-right: calc(-1 * $block-margin);
 	margin-top: $header-margin;
+
+	@media (max-width: calc($desktop - 0.5px)) {
+		margin-bottom: calc(-1 * $block-margin);
+	}
+
+	@media (min-width: calc($tablet - 0.5px)) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: calc(-1 * $block-margin);
+	}
 
 	&__item {
 		background: $main-light-color;
 		box-shadow: 0px 1px 3px $main-dark-color-transparency-012, 0px 1px 1px $main-dark-color-transparency-014,
 			0px 2px 1px $main-dark-color-transparency-02;
 		border-radius: 0px 0px 4px 4px;
-		margin-right: $block-margin;
+		margin-bottom: $block-margin;
+
+		@media (min-width: calc($tablet - 0.5px)) {
+			width: calc(100% / 2 - $block-margin);
+			margin-right: $block-margin;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			width: calc(100% / 4 - $block-margin);
+			margin-right: $block-margin;
+			margin-bottom: 0;
+		}
 	}
 
 	&__icon {
@@ -43,8 +62,7 @@
 		@extend %flex-condition;
 		@extend %social-link;
 		fill: $icon-color;
-		@include transition(fill);
-		@include transition(background-color);
+		@include transition(fill background-color);
 
 		&:hover,
 		&:focus {

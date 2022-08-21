@@ -2,11 +2,19 @@
 	@extend %list;
 	@extend %flex-wrap;
 	justify-content: center;
-	margin-bottom: $header-margin;
 	margin-right: -8px;
+
+	@media (max-width: calc($tablet - 0.5px)) {
+		margin-bottom: -15px;
+		justify-content: left;
+	}
 
 	&__item {
 		margin-right: 8px;
+
+		@media (max-width: calc($tablet - 0.5px)) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__button {
@@ -21,9 +29,7 @@
 		padding-bottom: 6px;
 		padding-right: 22px;
 		padding-left: 22px;
-		@include transition(color);
-		@include transition(box-shadow);
-		@include transition(background-color);
+		@include transition(color box-shadow background-color);
 
 		&:hover,
 		&:focus {

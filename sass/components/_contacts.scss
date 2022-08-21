@@ -1,16 +1,37 @@
 .header-contacts {
+	@media (max-width: calc($tablet - 0.5px)) {
+		display: none;
+	}
 	@extend %list;
 	@extend %header;
+	flex-direction: column;
 	margin-left: auto;
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		flex-direction: row;
+	}
 
 	&__item {
 		@extend %header-item;
+		@media (max-width: calc($desktop - 0.5px)) {
+			margin: 0;
+
+			&:last-child {
+				@media (max-width: calc($desktop - 0.5px)) {
+					margin-top: 10px;
+				}
+			}
+		}
 	}
 
 	&__link {
 		@extend %link;
 		@extend %header-link;
 		color: $text-color;
+		@media (max-width: calc($desktop - 0.5px)) {
+			padding: 0;
+			margin: 0;
+		}
 
 		&:hover,
 		&:focus {
@@ -21,6 +42,21 @@
 	&__icon {
 		margin-right: 10px;
 		fill: currentColor;
+	}
+}
+
+.footer-contacts {
+	@media (max-width: calc($desktop - 0.5px)) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@media (min-width: calc($tablet - 0.5px)) {
+		margin-right: 165px;
+	}
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		margin-right: 70px;
 	}
 }
 
@@ -37,6 +73,10 @@
 		color: $main-light-color;
 		@include transition(color);
 
+		@media (min-width: calc($desktop - 0.5px)) {
+			text-align: left;
+		}
+
 		&:hover,
 		&:focus {
 			@extend %link-hover;
@@ -48,7 +88,13 @@
 	}
 
 	&__item {
-		margin-top: 9px;
+		text-align: center;
+		margin-top: 8px;
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			text-align: left;
+			margin-top: 9px;
+		}
 	}
 
 	&__link {

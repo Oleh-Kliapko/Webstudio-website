@@ -53,16 +53,27 @@
 }
 
 %container {
-	width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-right: auto;
 	margin-left: auto;
+
+	@media screen and (min-width: $mobile) {
+		width: $mobile;
+	}
+
+	@media screen and (min-width: $tablet) {
+		width: $tablet;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
 }
 
 %icon-condition {
 	display: block;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -97,15 +108,10 @@
 	transition: color $timing $cubic;
 }
 
-%section {
-	padding-top: $section-margin;
-	padding-bottom: $section-margin;
-}
-
 %section-title {
 	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
+	font-size: 28px;
+	line-height: 1.18;
 	text-align: center;
 	letter-spacing: 0.03em;
 	margin: 0;

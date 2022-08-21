@@ -1,6 +1,16 @@
 .subscription-form {
 	display: flex;
-	width: 570px;
+	flex-direction: column;
+
+	@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
+		width: 450px;
+		align-self: center;
+	}
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		width: 570px;
+		flex-direction: row;
+	}
 
 	&__input {
 		font-size: 16px;
@@ -15,12 +25,16 @@
 		padding-bottom: 15px;
 		padding-left: 16px;
 		outline: none;
+
+		@media (max-width: calc($desktop - 0.5px)) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__button {
 		@extend %button;
 		display: flex;
-		justify-content: center;
+		align-self: center;
 		color: $main-light-color;
 		background-color: $accent-color;
 		box-shadow: 0px 4px 4px $main-dark-color-transparency-015;
@@ -29,8 +43,16 @@
 		line-height: 1.88;
 		letter-spacing: 0.06em;
 		padding: 10px 28px;
-		margin-left: 12px;
+
 		@include transition(background-color);
+
+		@media (max-width: calc($desktop - 0.5px)) {
+			width: 200px;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			margin-left: 12px;
+		}
 
 		&:hover,
 		&:focus {

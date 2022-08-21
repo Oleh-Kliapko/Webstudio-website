@@ -21,6 +21,15 @@
             <a class="header__logo" href="./index.html" lang="en"> Web<span class="header__logo--part">Studio
                 </span>
             </a>
+            <button class="header-button is-open" type="button" aria-expanded="false"
+                aria-controls="header-menu__container" data-menu-button>
+                <svg aria-label="Перемикач мобільного меню" width="40" height="40">
+                    <use class="header-button__icon--close" href="./images/sprite.svg#close_menu"></use>
+                    <use class="header-button__icon--menu" href="./images/sprite.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="header-menu__container" id="header-menu__container" data-menu> Контектне меню
+            </div>
             <nav>
                 <ul class="header-nav">
                     <li class="header-nav__item">
@@ -292,42 +301,42 @@
             <div class="clients-wrapper">
                 <h2 class="section-clients__title">Постійні клієнти</h2>
                 <ul class="clients">
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo3" width="106" height="60"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo4"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo5"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link" href="#">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./images/sprite.svg#logo6"></use>
@@ -341,56 +350,59 @@
     <!--Адреса і контакти-->
     <footer class="footer">
         <div class="footer-wrapper">
-            <div>
-                <a class="footer__logo" href="./index.html" lang="en">Web<span class="footer__logo--part">Studio</span>
-                </a>
-                <address class="address">
-                    <a class="address__text" href="https://goo.gl/maps/p8s5ygANvgGcfePx5" target="_blank"
-                        rel="noopener noreferrer">
-                        м. Київ, пр-т Лесі Українки, 26
+            <div class="footer-thumb">
+                <div class="footer-contacts">
+                    <a class="footer__logo" href="./index.html" lang="en">Web<span
+                            class="footer__logo--part">Studio</span>
                     </a>
-                    <ul class="address__list">
-                        <li class="address__item">
-                            <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <address class="address">
+                        <a class="address__text" href="https://goo.gl/maps/p8s5ygANvgGcfePx5" target="_blank"
+                            rel="noopener noreferrer">
+                            м. Київ, пр-т Лесі Українки, 26
+                        </a>
+                        <ul class="address__list">
+                            <li class="address__item">
+                                <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item">
+                                <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footer__join">
+                    <strong class="footer__join-title">Приєднуйтесь</strong>
+                    <ul class="social-networks">
+                        <li aria-label="Instagram">
+                            <a class="join__social-link" href="">
+                                <svg width="20" height="20">
+                                    <use href="./images/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="address__item">
-                            <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <li aria-label="Twitter">
+                            <a class="join__social-link" href="">
+                                <svg width="20" height="20">
+                                    <use href="./images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li aria-label="Facebook">
+                            <a class="join__social-link" href="">
+                                <svg width="20" height="20">
+                                    <use href="./images/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li aria-label="LinkedIn">
+                            <a class="join__social-link" href="">
+                                <svg width="20" height="20">
+                                    <use href="./images/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="footer__join">
-                <strong class="footer__join-title">Приєднуйтесь</strong>
-                <ul class="social-networks">
-                    <li aria-label="Instagram">
-                        <a class="join__social-link" href="">
-                            <svg width="20" height="20">
-                                <use href="./images/sprite.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li aria-label="Twitter">
-                        <a class="join__social-link" href="">
-                            <svg width="20" height="20">
-                                <use href="./images/sprite.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li aria-label="Facebook">
-                        <a class="join__social-link" href="">
-                            <svg width="20" height="20">
-                                <use href="./images/sprite.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li aria-label="LinkedIn">
-                        <a class="join__social-link" href="">
-                            <svg width="20" height="20">
-                                <use href="./images/sprite.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="footer__subscription">
                 <strong class="footer__subscription-title">Підпишіться на розсилку</strong>
@@ -453,8 +465,8 @@
                     <label class="modal-form__checkbox-label">
                         <input class="modal-form__checkbox-input" type="checkbox" name="checkbox" value="condition" />
                         <span class="modal-form__checkbox-icon"></span>
-                        <span> Погоджуюся з розсилкою та приймаю <a class="modal-form__checkbox-condition" href="">Умови
-                                договору</a></span>
+                        <span class="modal-form__checkbox-agreement"> Погоджуюся з розсилкою та приймаю <a
+                                class="modal-form__checkbox-condition" href="">Умови договору</a></span>
                     </label>
                 </div>
                 <button class="modal-form__button-submit" type="submit">Відправити</button>
@@ -488,6 +500,23 @@
                         console.log(`${name}: ${value}`),
                     );
                 });
+        })();
+    </script>
+
+    <!-- JS для відображення закритого чи вікритого меню -->
+    <script>
+        (() => {
+            const menuBtnRef = document.querySelector("[data-menu-button]");
+            const mobileMenuRef = document.querySelector("[data-menu]");
+
+            menuBtnRef.addEventListener("click", () => {
+                const expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+                menuBtnRef.classList.toggle("is-open");
+                menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+                mobileMenuRef.classList.toggle("is-open");
+            });
         })();
     </script>
 

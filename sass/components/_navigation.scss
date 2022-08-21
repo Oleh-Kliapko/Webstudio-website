@@ -1,4 +1,7 @@
 .header-nav {
+	@media (max-width: calc($tablet - 0.5px)) {
+		display: none;
+	}
 	@extend %list;
 	@extend %header;
 	margin-left: calc(93px - $header-margin);

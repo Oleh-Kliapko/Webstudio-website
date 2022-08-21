@@ -1,13 +1,30 @@
 .projects {
 	@extend %list;
 	@extend %flex-wrap;
-	margin-right: calc(-1 * $block-margin);
+	margin-top: $block-margin;
 	margin-bottom: calc(-1 * $block-margin);
 
+	@media (max-width: calc($tablet - 0.5px)) {
+		justify-content: center;
+	}
+
+	@media (min-width: calc($tablet - 0.5px)) {
+		margin-right: calc(-1 * $block-margin);
+	}
+
 	&__item {
-		width: calc((100% / 3) - $block-margin);
-		margin-right: $block-margin;
 		margin-bottom: $block-margin;
+		width: 100%;
+
+		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
+			width: calc((100% / 2) - $block-margin);
+			margin-right: $block-margin;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			width: calc((100% / 3) - $block-margin);
+			margin-right: $block-margin;
+		}
 	}
 
 	&__link {
@@ -66,6 +83,12 @@
 		padding-bottom: 20px;
 		padding-left: 24px;
 		padding-right: 24px;
+
+		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
+			.projects__item:first-child & {
+				padding-bottom: 56px;
+			}
+		}
 	}
 
 	&__title {

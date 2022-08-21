@@ -1,20 +1,30 @@
 .clients {
 	@extend %list;
 	@extend %flex-wrap;
-	gap: 30px;
+	gap: $block-margin;
 	margin-top: $header-margin;
+
+	&__item {
+		width: calc((100% - 1 * $block-margin) / 2);
+
+		@media (min-width: calc($tablet - 0.5px)) {
+			width: calc((100% - 2 * $block-margin) / 3);
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			width: calc((100% - 5 * $block-margin) / 6);
+		}
+	}
 
 	&__link {
 		@extend %link;
 		@extend %flex-condition;
 		outline: transparent;
-		width: 170px;
 		height: 92px;
 		border: $main-border solid $icon-color;
 		border-radius: $main-border-radius;
 		color: $icon-color;
-		@include transition(border);
-		@include transition(color);
+		@include transition(color border-color);
 
 		&:hover,
 		&:focus {

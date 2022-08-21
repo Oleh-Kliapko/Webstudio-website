@@ -1,9 +1,10 @@
 .header__logo {
 	@extend %logo;
 	@extend %link;
-	padding-top: 24px;
-	padding-bottom: 24px;
-
+	align-self: center;
+	@media (max-width: calc($tablet - 0.5px)) {
+		margin-right: auto;
+	}
 	&--part {
 		color: $main-dark-color;
 	}

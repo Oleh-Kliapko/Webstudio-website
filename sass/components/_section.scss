@@ -2,12 +2,25 @@
 .section-features,
 .section-clients,
 .section-portfolio {
-	@extend %section;
+	padding-top: $section-margin;
+	padding-bottom: $section-margin;
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 
 .section-work {
-	margin-top: 0;
 	padding-bottom: $section-margin;
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		padding-bottom: 94px;
+	}
+
+	@media screen and (max-width: calc($desktop - 1px)) {
+		display: none;
+	}
 }
 
 .section-team {
@@ -24,6 +37,11 @@
 .section-clients__title,
 .section-portfolio__title {
 	@extend %section-title;
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		font-size: 36px;
+		line-height: 1.17;
+	}
 }
 
 .section-features__title,

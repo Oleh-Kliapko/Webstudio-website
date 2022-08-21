@@ -1,17 +1,59 @@
 .footer {
+	display: block;
 	background-color: $footer-bgr-color;
 	padding-top: 60px;
 	padding-bottom: 60px;
+	width: 100%;
 
 	&-wrapper {
-		display: flex;
-		align-items: baseline;
+		@media (max-width: calc($desktop - 0.5px)) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			display: flex;
+			align-items: baseline;
+		}
 	}
 
-	&__join,
-	&__subscription {
+	&-thumb {
+		display: flex;
+
+		@media (max-width: calc($tablet - 0.5px)) {
+			flex-direction: column;
+		}
+
+		@media (min-width: calc($tablet - 0.5px)) {
+			align-items: baseline;
+			justify-content: center;
+		}
+	}
+
+	&__join {
 		display: block;
-		margin-left: auto;
+
+		@media (max-width: calc($tablet - 0.5px)) {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			margin-left: auto;
+		}
+	}
+
+	&__subscription {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
+			margin-top: 60px;
+		}
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			margin-left: auto;
+		}
 	}
 
 	&__join-title,
@@ -24,7 +66,11 @@
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
 		color: $main-light-color;
-		text-align: left;
+		text-align: center;
 		margin-bottom: 20px;
+
+		@media (min-width: calc($desktop - 0.5px)) {
+			text-align: left;
+		}
 	}
 }
