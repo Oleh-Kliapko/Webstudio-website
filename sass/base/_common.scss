@@ -4,6 +4,10 @@
 	font-family: $main-font, $secondary-font, $default-font;
 }
 
+.body.modal-open {
+	overflow: hidden;
+}
+
 .header-wrapper,
 .footer-wrapper,
 .hero-wrapper,

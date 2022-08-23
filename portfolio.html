@@ -21,14 +21,53 @@
             <a class="header__logo" href="./index.html" lang="en"> Web<span class="header__logo--part">Studio
                 </span>
             </a>
-            <button class="header-button is-open" type="button" aria-expanded="false"
-                aria-controls="header-menu__container" data-menu-button>
-                <svg aria-label="Перемикач мобільного меню" width="40" height="40">
-                    <use class="header-button__icon--close" href="./images/sprite.svg#close_menu"></use>
-                    <use class="header-button__icon--menu" href="./images/sprite.svg#menu"></use>
+            <button class="menu-button is-open" type="button" aria-expanded="false" aria-controls="menu__container"
+                data-menu-button>
+                <svg class="menu-button__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+                    <use class="menu-button__icon--menu" href="./images/sprite.svg#menu"></use>
+                    <use class="menu-button__icon--close" href="./images/sprite.svg#close_menu"></use>
                 </svg>
             </button>
-            <div class="header-menu__container" id="header-menu__container" data-menu> Контектне меню
+            <div class="menu__container" id="menu__container" data-menu>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="./index.html">Студія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link  menu__link--current" href="./portfolio.html">Портфоліо</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#subsription">Контакти</a>
+                    </li>
+                </ul>
+                <div class="menu-thumb">
+                    <ul class="menu-contacts">
+                        <li class="menu-contacts__item">
+                            <a class="menu-contacts__link" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="menu-contacts__item">
+                            <a class="menu-contacts__link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu-social">
+                        <li class="menu-social__item">
+                            <a class="menu-social__link" href="">Instagram</a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a class="menu-social__link" href="">Twitter</a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a class="menu-social__link" href="">Facebook</a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a class="menu-social__link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <nav>
                 <ul class="header-nav">

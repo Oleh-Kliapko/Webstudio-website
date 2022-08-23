@@ -1,0 +1,146 @@
+.menu-button {
+	@media (min-width: calc($tablet - 0.5px)) {
+		display: none;
+	}
+	display: inline-flex;
+	cursor: pointer;
+	border: none;
+	color: $head-color;
+	background-color: transparent;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0;
+	padding-right: 0;
+	z-index: 1;
+
+	&__icon--menu {
+		display: none;
+	}
+
+	&.is-open .menu-button__icon--close {
+		display: none;
+	}
+
+	&.is-open .menu-button__icon--menu {
+		display: block;
+	}
+
+	&__icon--close {
+		fill: currentColor;
+		@include transition(color);
+	}
+
+	&__icon:hover &__icon--close,
+	&__icon:focus &__icon--close {
+		color: $accent-color;
+	}
+}
+
+.menu__container {
+	display: none;
+	position: absolute;
+	top: calc(100% - 61px);
+	left: 0;
+	width: 100%;
+	padding-top: 48px;
+	padding-bottom: 48px;
+	padding-left: 40px;
+	background-color: $main-light-color;
+
+	@media (max-width: calc($tablet - 0.5px)) {
+		&.is-open {
+			display: block;
+		}
+	}
+}
+
+.menu {
+	@extend %list;
+	margin-top: -32px;
+
+	&__item {
+		margin-top: 32px;
+	}
+
+	&__link {
+		@extend %link;
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1.18;
+		letter-spacing: 0.02em;
+		color: $head-color;
+		@include transition(color);
+
+		&--current {
+			color: $accent-color;
+		}
+
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
+	}
+}
+
+.menu-thumb {
+	margin-top: 302px;
+}
+
+.menu-contacts {
+	@extend %list;
+	margin-top: -32px;
+	margin-bottom: 64px;
+
+	&__item {
+		margin-top: 32px;
+	}
+
+	&__link {
+		@extend %link;
+		font-weight: 500;
+		font-size: 34px;
+		line-height: 1.17;
+		letter-spacing: 0.02em;
+		color: $accent-color;
+		@include transition(color);
+
+		.menu-contacts__item:last-child & {
+			font-size: 24px;
+			color: $text-color;
+
+			&:hover,
+			&:focus {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+.menu-social {
+	@extend %list;
+	display: flex;
+
+	&__item {
+		padding-right: 10px;
+		padding-left: 10px;
+		border-right: 1px solid rgba(33, 33, 33, 0.2);
+	}
+
+	&__item:first-child {
+		padding-left: 0;
+	}
+
+	&__item:last-child {
+		padding-right: 0;
+		border-right: none;
+	}
+
+	&__link {
+		@extend %link;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.22;
+		letter-spacing: 0.02em;
+		color: $accent-color;
+	}
+}

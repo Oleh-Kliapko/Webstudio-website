@@ -2,6 +2,7 @@
 	@media (max-width: calc($tablet - 0.5px)) {
 		display: none;
 	}
+
 	@extend %list;
 	@extend %header;
 	flex-direction: column;
