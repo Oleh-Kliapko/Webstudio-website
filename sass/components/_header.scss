@@ -8,9 +8,12 @@
 	z-index: 1;
 
 	&-wrapper {
-		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (min-width: calc($tablet - 0.5px)) {
+			position: relative;
+		}
 	}
 }
