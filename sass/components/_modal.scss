@@ -26,8 +26,6 @@
 	top: 50%;
 	left: 50%;
 	overflow: auto;
-
-	width: 350px;
 	padding: 40px;
 	background-color: $main-light-color;
 	box-shadow: 0px 1px 3px $main-dark-color-transparency-012, 0px 1px 1px $main-dark-color-transparency-014,
@@ -37,6 +35,10 @@
 	transform: translate(-50%, -50%) scale(1);
 	opacity: 1;
 	@include transition(transform opacity);
+
+	@media (max-width: calc($desktop - 0.5px)) {
+		transform: translate(-50%, -30%) scale(1);
+	}
 
 	@media (min-width: calc($mobile - 0.5px)) {
 		max-width: 450px;

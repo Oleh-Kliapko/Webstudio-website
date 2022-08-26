@@ -42,7 +42,7 @@
 	top: calc(100% - 61px);
 	left: 0;
 	width: 100%;
-	height: 796px;
+	height: 100vh;
 	padding-top: 48px;
 	padding-bottom: 48px;
 	padding-left: 40px;
@@ -121,6 +121,7 @@
 .menu-social {
 	@extend %list;
 	display: flex;
+	flex-wrap: wrap;
 
 	&__item {
 		padding-right: 10px;
