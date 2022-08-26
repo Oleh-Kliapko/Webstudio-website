@@ -172,7 +172,7 @@
   font-family: Roboto, Raleway, sans-serif;
 }
 
-.body.modal-open {
+.no-scroll {
   overflow: hidden;
 }
 
