@@ -24,7 +24,7 @@
 		border: $main-border solid $icon-color;
 		border-radius: $main-border-radius;
 		color: $icon-color;
-		@include transition(color border-color);
+		@include transition(color, border-color, null);
 
 		&:hover,
 		&:focus {

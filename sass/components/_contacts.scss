@@ -72,7 +72,7 @@
 		@extend %title;
 		display: block;
 		color: $main-light-color;
-		@include transition(color);
+		@include transition(color, null, null);
 
 		@media (min-width: calc($desktop - 0.5px)) {
 			text-align: left;
@@ -101,7 +101,7 @@
 	&__link {
 		@extend %link;
 		color: $main-light-color-transparency-06;
-		@include transition(color);
+		@include transition(color, null, null);
 
 		&:hover,
 		&:focus {
@@ -115,7 +115,7 @@
 	@extend %social-link;
 	fill: $main-light-color;
 	background-color: $main-light-color-transparency-01;
-	@include transition(background-color);
+	@include transition(background-color, null, null);
 
 	&:hover,
 	&:focus {

@@ -27,7 +27,7 @@
 
 	&__icon--close {
 		fill: currentColor;
-		@include transition(color);
+		@include transition(color, null, null);
 	}
 
 	&__icon:hover &__icon--close,
@@ -75,7 +75,7 @@
 		line-height: 1.18;
 		letter-spacing: 0.02em;
 		color: $head-color;
-		@include transition(color);
+		@include transition(color, null, null);
 
 		&--current {
 			color: $accent-color;
@@ -104,7 +104,7 @@
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 		color: $accent-color;
-		@include transition(color);
+		@include transition(color, null, null);
 
 		.menu-contacts__item:last-child & {
 			font-size: 24px;

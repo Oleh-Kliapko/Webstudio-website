@@ -7,13 +7,32 @@
 	padding-top: 118px;
 	padding-bottom: 118px;
 	background-color: $main-bgr-color;
-	background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_tablet.jpg);
+	background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_mobile.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 
 	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-		background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_tablet@2x.jpg);
+		background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_mobile@2x.jpg);
+	}
+
+	@media (min-width: calc($tablet - 0.5px)) {
+		background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_tablet.jpg);
+
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero_tablet@2x.jpg);
+		}
+	}
+
+	@media (min-width: calc($desktop - 0.5px)) {
+		max-width: 1600px;
+		padding-top: 200px;
+		padding-bottom: 200px;
+		background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero.jpg);
+
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero@2x.jpg);
+		}
 	}
 
 	&__title {
@@ -30,13 +49,13 @@
 		margin-left: auto;
 
 		@media (min-width: calc($tablet - 0.5px)) {
-			width: 360px;
+			width: 75vw;
 		}
 
 		@media (min-width: calc($desktop - 0.5px)) {
 			font-size: 44px;
 			line-height: 1.36;
-			width: 696px;
+			width: 58vw;
 		}
 	}
 
@@ -50,7 +69,7 @@
 		line-height: 1.88;
 		letter-spacing: 0.06em;
 		padding: 10px 24px;
-		@include transition(background-color);
+		@include transition(background-color, null, null);
 
 		@media (min-width: calc($desktop - 0.5px)) {
 			padding: 10px 32px;
@@ -59,19 +78,6 @@
 		&:hover,
 		&:focus {
 			background-color: $accent-color-hover;
-		}
-	}
-}
-
-@media (min-width: calc($desktop - 0.5px)) {
-	.hero {
-		max-width: 1600px;
-		padding-top: 200px;
-		padding-bottom: 200px;
-		background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero.jpg);
-
-		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-			background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/hero@2x.jpg);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 	height: 100%;
 	opacity: 1;
 	background-color: $main-dark-color-transparency-02;
-	@include transition(opacity);
+	@include transition(opacity, null, null);
 	overflow-y: scroll;
 }
 
@@ -34,7 +34,7 @@
 
 	transform: translate(-50%, -50%) scale(1);
 	opacity: 1;
-	@include transition(transform opacity);
+	@include transition(transform, opacity, null);
 
 	@media (max-width: calc($desktop - 0.5px)) {
 		transform: translate(-50%, -30%) scale(1);
@@ -62,7 +62,7 @@
 		background-color: $main-light-color;
 		border: $main-border solid $main-dark-color-transparency-01;
 		color: $main-dark-color;
-		@include transition(color);
+		@include transition(color, null, null);
 
 		&__icon {
 			fill: currentColor;
@@ -130,7 +130,7 @@
 		left: 12px;
 		transform: translateY(-50%);
 		fill: $head-color;
-		@include transition(fill);
+		@include transition(fill, null, null);
 
 		.modal-form__input:hover + &,
 		.modal-form__input:focus + & {
@@ -188,7 +188,7 @@
 		height: 16px;
 		border: 2px solid $head-color;
 		border-radius: $main-border-radius;
-		@include transition(border);
+		@include transition(border, null, null);
 	}
 
 	&__checkbox-input:focus + &__checkbox-icon {
@@ -201,7 +201,7 @@
 		background-color: $accent-color;
 		background-size: contain;
 		background-origin: border-box;
-		@include transition(background-color);
+		@include transition(background-color, null, null);
 	}
 
 	&__checkbox-agreement {
@@ -231,7 +231,7 @@
 		line-height: 1.88;
 		letter-spacing: 0.06em;
 		padding: 10px 52px;
-		@include transition(background-color);
+		@include transition(background-color, null, null);
 
 		&:hover,
 		&:focus {

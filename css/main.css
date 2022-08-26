@@ -180,6 +180,12 @@
   gap: 10px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   background: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -581,7 +587,7 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  transition-property: transform opacity;
+  transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -797,7 +803,7 @@
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
-  transition-property: color box-shadow background-color;
+  transition-property: color, box-shadow, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -951,14 +957,37 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mobile@2x.jpg);
+  }
+}
+@media (min-width: 767.5px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet.jpg);
+  }
+}
+@media (min-width: 767.5px) and (min-device-pixel-ratio: 2), (min-width: 767.5px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 767.5px) and (min-resolution: 192dpi), (min-width: 767.5px) and (min-resolution: 2dppx) {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet@2x.jpg);
+  }
+}
+@media (min-width: 1199.5px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  }
+}
+@media (min-width: 1199.5px) and (min-device-pixel-ratio: 2), (min-width: 1199.5px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1199.5px) and (min-resolution: 192dpi), (min-width: 1199.5px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero@2x.jpg);
   }
 }
 .hero__title {
@@ -1007,19 +1036,6 @@
   background-color: #188ce8;
 }
 
-@media (min-width: 1199.5px) {
-  .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  }
-}
-@media (min-width: 1199.5px) and (min-device-pixel-ratio: 2), (min-width: 1199.5px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1199.5px) and (min-resolution: 192dpi), (min-width: 1199.5px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero@2x.jpg);
-  }
-}
 @media (max-width: 1199.5px) {
   .features {
     margin-bottom: -30px;
@@ -1154,7 +1170,7 @@
 }
 .member__social-link {
   fill: #afb1b8;
-  transition-property: fill background-color;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1186,7 +1202,7 @@
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition-property: color border-color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1229,7 +1245,9 @@
   }
 }
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1272,11 +1290,8 @@
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-}
-@media (min-width: 767.5px) and (max-width: 1199.5px) {
-  .projects__item:first-child .projects__name {
-    padding-bottom: 56px;
-  }
+  flex-grow: 1;
+  border-top: 0;
 }
 .projects__title {
   color: #212121;

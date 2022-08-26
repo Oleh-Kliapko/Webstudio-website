@@ -29,8 +29,10 @@
 
 	&__link {
 		@extend %link;
-		display: block;
-		@include transition(box-shadow);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		@include transition(box-shadow, null, null);
 
 		&:hover,
 		&:focus {
@@ -69,7 +71,7 @@
 		color: $main-light-color;
 		background-color: $accent-color-overlay;
 		transform: translateY(101%);
-		@include transition(transform);
+		@include transition(transform, null, null);
 
 		.projects__link:hover &,
 		.projects__link:focus & {
@@ -83,12 +85,8 @@
 		padding-bottom: 20px;
 		padding-left: 24px;
 		padding-right: 24px;
-
-		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
-			.projects__item:first-child & {
-				padding-bottom: 56px;
-			}
-		}
+		flex-grow: 1;
+		border-top: 0;
 	}
 
 	&__title {

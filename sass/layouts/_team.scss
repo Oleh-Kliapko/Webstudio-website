@@ -62,7 +62,7 @@
 		@extend %flex-condition;
 		@extend %social-link;
 		fill: $icon-color;
-		@include transition(fill background-color);
+		@include transition(fill, background-color, null);
 
 		&:hover,
 		&:focus {

@@ -1,5 +1,5 @@
-@mixin transition($type, $duration: $timing, $function: $cubic) {
-	transition-property: $type;
+@mixin transition($type1, $type2, $type3, $duration: $timing, $function: $cubic) {
+	transition-property: $type1, $type2, $type3;
 	transition-duration: $duration;
 	transition-timing-function: $function;
 }
