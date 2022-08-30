@@ -2,7 +2,8 @@
 	@extend %logo;
 	@extend %link;
 	align-self: center;
-	@media (max-width: calc($tablet - 0.5px)) {
+
+	@media screen and (max-width: calc($tablet - 0.5px)) {
 		margin-right: auto;
 	}
 	&--part {

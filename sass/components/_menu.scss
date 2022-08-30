@@ -1,5 +1,5 @@
 .menu-button {
-	@media (min-width: calc($tablet - 0.5px)) {
+	@media screen and (min-width: calc($tablet - 0.5px)) {
 		display: none;
 	}
 	display: inline-flex;
@@ -48,7 +48,7 @@
 	padding-left: 40px;
 	background-color: $main-light-color;
 
-	@media (max-width: calc($tablet - 0.5px)) {
+	@media screen and (max-width: calc($tablet - 0.5px)) {
 		&.is-open {
 			display: flex;
 			flex-direction: column;

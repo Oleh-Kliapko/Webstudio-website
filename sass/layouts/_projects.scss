@@ -4,11 +4,11 @@
 	margin-top: $block-margin;
 	margin-bottom: calc(-1 * $block-margin);
 
-	@media (max-width: calc($tablet - 0.5px)) {
+	@media screen and (max-width: calc($tablet - 0.5px)) {
 		justify-content: center;
 	}
 
-	@media (min-width: calc($tablet - 0.5px)) {
+	@media screen and (min-width: calc($tablet - 0.5px)) {
 		margin-right: calc(-1 * $block-margin);
 	}
 
@@ -16,12 +16,12 @@
 		margin-bottom: $block-margin;
 		max-width: 100%;
 
-		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
 			width: calc((100% / 2) - $block-margin);
 			margin-right: $block-margin;
 		}
 
-		@media (min-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($desktop - 0.5px)) {
 			width: calc((100% / 3) - $block-margin);
 			margin-right: $block-margin;
 		}

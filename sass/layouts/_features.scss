@@ -1,11 +1,11 @@
 .features {
 	@extend %list;
 
-	@media (max-width: calc($desktop - 0.5px)) {
+	@media screen and (max-width: calc($desktop - 0.5px)) {
 		margin-bottom: calc(-1 * $block-margin);
 	}
 
-	@media (min-width: calc($tablet - 0.5px)) {
+	@media screen and (min-width: calc($tablet - 0.5px)) {
 		display: flex;
 		flex-wrap: wrap;
 		margin-right: calc(-1 * $block-margin);
@@ -14,12 +14,12 @@
 	&__item {
 		margin-bottom: $block-margin;
 
-		@media (min-width: calc($tablet - 0.5px)) {
+		@media screen and (min-width: calc($tablet - 0.5px)) {
 			width: calc(100% / 2 - $block-margin);
 			margin-right: $block-margin;
 		}
 
-		@media (min-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($desktop - 0.5px)) {
 			width: calc(100% / 4 - $block-margin);
 			margin-right: $block-margin;
 			margin-bottom: 0;
@@ -37,7 +37,7 @@
 	&__title {
 		@extend %title;
 
-		@media (max-width: calc($tablet - 0.5px)) {
+		@media screen and (max-width: calc($tablet - 0.5px)) {
 			text-align: center;
 		}
 

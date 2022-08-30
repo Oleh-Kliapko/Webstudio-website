@@ -36,16 +36,16 @@
 	opacity: 1;
 	@include transition(transform, opacity, null);
 
-	@media (max-width: calc($desktop - 0.5px)) {
+	@media screen and (max-width: calc($desktop - 0.5px)) {
 		transform: translate(-50%, -30%) scale(1);
 	}
 
-	@media (min-width: calc($mobile - 0.5px)) {
+	@media screen and (min-width: calc($mobile - 0.5px)) {
 		max-width: 450px;
 		width: 100%;
 	}
 
-	@media (min-width: calc($desktop - 0.5px)) {
+	@media screen and (min-width: calc($desktop - 0.5px)) {
 		max-width: 528px;
 		width: 100%;
 	}
@@ -90,7 +90,7 @@
 		color: $head-color;
 		margin-bottom: 12px;
 
-		@media (min-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($desktop - 0.5px)) {
 			line-height: 1.15;
 		}
 	}
@@ -152,7 +152,7 @@
 		padding: 12px 16px;
 		height: 120px;
 
-		@media (min-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($desktop - 0.5px)) {
 			font-size: 12px;
 			line-height: 1.17;
 		}
@@ -173,7 +173,7 @@
 		margin: 0;
 		cursor: pointer;
 
-		@media (max-width: calc($desktop - 0.5px)) {
+		@media screen and (max-width: calc($desktop - 0.5px)) {
 			justify-content: left;
 		}
 	}
@@ -208,7 +208,7 @@
 		font-size: 12px;
 		line-height: 1.17;
 
-		@media (min-width: calc($desktop - 0.5px)) {
+		@media screen and (min-width: calc($desktop - 0.5px)) {
 			font-size: 14px;
 			line-height: 1.71;
 		}
