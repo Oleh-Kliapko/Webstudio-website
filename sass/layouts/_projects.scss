@@ -14,7 +14,7 @@
 
 	&__item {
 		margin-bottom: $block-margin;
-		width: 100%;
+		max-width: 100%;
 
 		@media (min-width: calc($tablet - 0.5px)) and (max-width: calc($desktop - 0.5px)) {
 			width: calc((100% / 2) - $block-margin);

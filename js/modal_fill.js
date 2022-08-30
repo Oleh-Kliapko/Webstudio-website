@@ -1,3 +1,4 @@
+"use strict";
 (() => {
 	document.querySelector(".js-speaker-form").addEventListener("submit", e => {
 		e.preventDefault();

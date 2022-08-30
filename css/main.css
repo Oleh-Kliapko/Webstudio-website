@@ -1004,14 +1004,14 @@ img {
 }
 @media (min-width: 767.5px) {
   .hero__title {
-    width: 360px;
+    width: 75vw;
   }
 }
 @media (min-width: 1199.5px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    width: 58vw;
   }
 }
 .hero__button {
@@ -1230,7 +1230,7 @@ img {
 }
 .projects__item {
   margin-bottom: 30px;
-  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 767.5px) and (max-width: 1199.5px) {
   .projects__item {
