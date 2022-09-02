@@ -49,8 +49,6 @@
 	background-color: $main-light-color;
 
 	@media screen and (max-width: 374px) {
-		padding-top: 20px;
-		padding-bottom: 28px;
 		padding-left: 20px;
 	}
 
@@ -111,7 +109,7 @@
 		letter-spacing: 0.02em;
 		color: $accent-color;
 		@include transition(color, null, null);
-		@media screen and (max-width: 374px) {
+		@media screen and (max-width: 400px) {
 			font-size: 30px;
 		}
 
@@ -154,7 +152,7 @@
 		line-height: 1.22;
 		letter-spacing: 0.02em;
 		color: $accent-color;
-		@media screen and (max-width: 374px) {
+		@media screen and (max-width: 400px) {
 			font-size: 14px;
 		}
 	}

@@ -867,8 +867,6 @@ img {
 }
 @media screen and (max-width: 374px) {
   .menu__container {
-    padding-top: 20px;
-    padding-bottom: 28px;
     padding-left: 20px;
   }
 }
@@ -923,7 +921,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 400px) {
   .menu-contacts__link {
     font-size: 30px;
   }
@@ -959,7 +957,7 @@ img {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 400px) {
   .menu-social__link {
     font-size: 14px;
   }
