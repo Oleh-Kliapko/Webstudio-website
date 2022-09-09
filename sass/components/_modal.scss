@@ -8,6 +8,10 @@
 	background-color: $main-dark-color-transparency-02;
 	@include transition(opacity, null, null);
 	overflow-y: scroll;
+
+	@media screen and (max-width: calc($tablet - 0.5px)) {
+		padding: 30px;
+	}
 }
 
 .backdrop__is-hidden {
@@ -36,16 +40,20 @@
 	opacity: 1;
 	@include transition(transform, opacity, null);
 
-	@media screen and (max-width: calc($desktop - 0.5px)) {
-		transform: translate(-50%, -30%) scale(1);
+	@media screen and (max-width: calc($tablet - 0.5px)) {
+		position: relative;
 	}
 
-	@media screen and (min-width: calc($mobile - 0.5px)) {
-		max-width: 450px;
-		width: 100%;
-	}
+	// @media screen and (max-width: calc($desktop - 0.5px)) {
+	// 	transform: translate(-50%, -50%) scale(1);
+	// }
 
-	@media screen and (min-width: calc($desktop - 0.5px)) {
+	// @media screen and (min-width: calc($mobile - 0.5px)) {
+	// 	max-width: 450px;
+	// 	width: 100%;
+	// }
+
+	@media screen and (min-width: calc($tablet - 0.5px)) {
 		max-width: 528px;
 		width: 100%;
 	}
