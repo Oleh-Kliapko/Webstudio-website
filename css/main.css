@@ -1295,6 +1295,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 335px) {
+  .projects__description {
+    font-size: 16px;
+  }
+}
 .projects__link:hover .projects__description, .projects__link:focus .projects__description {
   transform: translateY(0%);
 }

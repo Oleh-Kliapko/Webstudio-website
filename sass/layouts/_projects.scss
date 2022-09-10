@@ -73,6 +73,10 @@
 		transform: translateY(101%);
 		@include transition(transform, null, null);
 
+		@media screen and (max-width: 335px) {
+			font-size: 16px;
+		}
+
 		.projects__link:hover &,
 		.projects__link:focus & {
 			transform: translateY(0%);
